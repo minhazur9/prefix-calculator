@@ -31,7 +31,7 @@ const calcData = (inputArr) => {
 const calculator = () => {
     let answer = 0;
     rl.question('Input Numbers\n', (input) => {
-        answer = calcData(input.split(''));
+        answer = calcData(input.split(' '));
         console.log(answer)
         rl.close()
     })
