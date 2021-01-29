@@ -10,16 +10,16 @@ const calcData = (inputArr) => {
     for(let i = inputArr.length-1; i >= 0; i--) {
         switch(inputArr[i]) {
             case '+':
-                stack.push(stack.shift() + stack.shift())
+                stack.push(stack.pop() + stack.pop())
                 break
             case '-':
-                stack.push(stack.shift() - stack.shift())
+                stack.push(stack.pop() - stack.pop())
                 break
             case '*':
-                stack.push(stack.shift() * stack.shift())
+                stack.push(stack.pop() * stack.pop())
                 break
             case '/':
-                stack.push(stack.shift() / stack.shift())
+                stack.push(stack.pop() / stack.pop())
                 break
             default:
                 stack.push(Number(inputArr[i]))
